@@ -1,0 +1,5 @@
+<li class="user-card">
+    <img [src]="user.avatar_url" alt="{{ user.login }}" width="50">
+    <a [href]="'https://github.com/' + user.login" target="_blank">{{ user.login }}</a>
+    <span>Followers: {{ user.followers?.length || '0'}}</span>
+</li>

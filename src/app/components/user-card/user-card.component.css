@@ -1,0 +1,48 @@
+stilo de cada User Card */
+body, html, p, div, h1, h2, h3, h4, h5, h6, span, input, button, a {
+
+  font-family: 'DM Sans', sans-serif; /* Aplica la fuente DM Sans globalmente */
+
+}
+.user-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.user-card img {
+  margin-right: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.user-card a {
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+  color: #3C1A75; /* Color púrpura para el nombre del usuario */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.user-card a:hover {
+  color: #2e135b; /* Púrpura más oscuro al hover */
+}
+
+.user-card span {
+  font-size: 16px;
+  color: #555;
+  font-family: 'DM Sans', sans-serif;
+}

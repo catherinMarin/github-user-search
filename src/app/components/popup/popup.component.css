@@ -1,0 +1,59 @@
+/* Overlay oscuro */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  /* Estilos del popup */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    padding: 20px;
+    max-height: 80vh; /* Limitar la altura máxima */
+    overflow-y: auto; /* Añadir scroll vertical si el contenido es demasiado largo */
+  }
+  
+  
+  /* Contenido del popup */
+  .popup-content {
+    position: relative;
+    padding: 20px;
+  }
+  
+  /* Botón de cerrar */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .popup {
+      width: 95%;
+      max-width: 300px;
+      max-height: 70vh; /* Ajustar la altura máxima en pantallas pequeñas */
+    }
+  
+    .close-btn {
+      font-size: 20px;
+    }
+  }
+  

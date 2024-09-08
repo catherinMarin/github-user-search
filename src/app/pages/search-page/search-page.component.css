@@ -1,0 +1,189 @@
+body, html, p, div, h1, h2, h3, h4, h5, h6, span, input, button, a {
+
+  font-family: 'DM Sans', sans-serif; /* Aplica la fuente DM Sans globalmente */
+
+}
+/* Caja de búsqueda */
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #3C1A75;
+  box-shadow: 0 0 5px rgba(60, 26, 117, 0.5); /* Sombra en púrpura */
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px; /* Bordes redondeados */
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: background-color 0.3s ease;
+  background-color: #3C1A75;
+  color: white;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:hover:not([disabled]) {
+  background-color: #3C1A75;
+  color: white;
+}
+button[type="submit"]:hover {
+  background-color: #2e135b;
+}
+
+/* Contenedor de resultados */
+.search-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.results-container {
+  margin-top: 20px;
+  padding: 0 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+/* Resultados */
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.results-container ul {
+  width: 100%;
+  max-width: 600px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.results-container ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}*/
+
+
+/* Paginación */
+.pagination-controls {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.pagination-controls button {
+  padding: 10px 15px;
+  margin: 0 5px;
+  background-color: #3C1A75;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Bordes redondeados */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-controls button[disabled] {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.pagination-controls button:hover {
+  background-color: #2e135b;
+}
+
+
+.pagination-controls span {
+  font-size: 16px;
+  margin: 0 15px;
+  color: #3C1A75;
+}
+
+
+
+
+
+
+
+
+
+
+/* Contenedor de mensajes de error justo debajo del input */
+form .error-container {
+  display: block; /* Asegura que ocupe todo el ancho */
+  margin-top: 5px; /* Separación del input */
+  color: #d32f2f; /* Color rojo para el texto */
+  font-size: 14px;
+}
+
+/* Icono del mensaje de error */
+form .error-container small::before {
+  content: '⚠️'; /* Icono de advertencia */
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #d32f2f; /* Borde rojo cuando hay un error */
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.3); /* Sombra roja alrededor del input */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .search-container {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .search-container input {
+      margin-bottom: 10px;
+      width: 100%;
+  }
+
+  .pagination-controls {
+      flex-direction: column;
+      align-items: center;
+  }
+}

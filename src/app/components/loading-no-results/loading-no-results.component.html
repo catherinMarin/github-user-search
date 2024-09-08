@@ -1,0 +1,10 @@
+
+<div *ngIf="loading" class="loading-container">
+    <i class="fas fa-spinner fa-spin"></i> <!-- Icono de carga -->
+    <p>Cargando...</p>
+  </div>
+  <div *ngIf="!loading && noResults" class="no-results-container">
+    <i class="fas fa-search"></i>
+    <p>No se encontraron resultados</p>
+  </div>
+  

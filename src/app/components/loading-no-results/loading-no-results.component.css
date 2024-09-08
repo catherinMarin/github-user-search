@@ -1,0 +1,27 @@
+.loading-container, .no-results-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .loading-container p, .no-results-container p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #3C1A75;
+  }
+  
+  .loading-container i, .no-results-container i {
+    font-size: 32px;
+    color: #3C1A75;
+  }
+  
+  .loading-container i.fa-spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    100% { transform: rotate(360deg); }
+  }
+  

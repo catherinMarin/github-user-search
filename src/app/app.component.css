@@ -1,0 +1,82 @@
+/* Estilos generales */
+body, html, p, div, h1, h2, h3, h4, h5, h6, span, input, button, a {
+   
+    font-family: 'DM Sans', sans-serif; 
+
+  }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f4f4f9; /* Fondo gris claro */
+    color: #333; /* Color del texto */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Contenedor principal */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #f4f4f9; /* Fondo gris claro */
+    color: #3C1A75; /* Púrpura del texto */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+   
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #3C1A75; /* Color del texto púrpura */
+}
+
+header nav a {
+    color: #3C1A75; /* Color púrpura exacto */
+    margin-right: 35px;
+    text-decoration: none; /* Eliminamos el subrayado */
+    font-size: 15px; /* Tamaño de fuente específico */
+    font-family: 'DM Sans', sans-serif; /* Fuente específica */
+    padding-bottom: 5px;
+    transition: border-bottom 0.3s ease; /* Transición suave */
+}
+
+header nav a:hover {
+    border-bottom: 3px solid #3C1A75; /* Efecto al hover sin subrayado, con línea inferior */
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f9;
+    color: #3C1A75;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-top: auto; /* Empuja el footer hacia el final */
+    display: flex;
+    font-size: 14px;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    header nav a {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+}

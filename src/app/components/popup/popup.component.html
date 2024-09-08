@@ -1,0 +1,7 @@
+<div class="overlay" *ngIf="visible" (click)="closePopup()"></div>
+<div class="popup" *ngIf="visible">
+  <div class="popup-content">
+    <button class="close-btn" (click)="closePopup()">×</button>
+    <ng-content></ng-content> 
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Buscar" formControlName="searchTerm" />
+    <button type="submit" [disabled]="!searchForm.valid">Buscar</button>
+    <div class="error-container" *ngIf="searchTerm?.invalid && (searchTerm?.dirty || searchTerm?.touched)">
+      <small *ngIf="searchTerm?.errors?.['minlength']">Mínimo 4 caracteres</small>
+      <small *ngIf="searchTerm?.errors?.['forbiddenTerm']">No puedes buscar la palabra 'flowww'</small>
+    </div>
+  </form>
+  

@@ -1,0 +1,44 @@
+  <div class="search-container">
+    <form [formGroup]="searchForm" (ngSubmit)="searchUsers()">
+      <input type="text" placeholder="Buscar" formControlName="searchTerm" />
+      <button type="submit" [disabled]="!searchForm.valid">Buscar</button>
+      <div class="error-container" *ngIf="searchTerm?.invalid && (searchTerm?.dirty || searchTerm?.touched)">
+        
+        <small *ngIf="searchTerm?.errors?.['minlength']">Mínimo 4 caracteres</small>
+        <small *ngIf="searchTerm?.errors?.['forbiddenTerm']">No puedes buscar la palabra 'flowww'</small>
+      </div>
+    </form>
+  </div>
+  <app-loading-no-results 
+    [loading]="loadingUsers" 
+    [noResults]="!loadingUsers && searchSubmitted && users.length === 0">
+  </app-loading-no-results>
+  
+  <div class="results-container" *ngIf="users.length > 0" >
+    <ul>
+      <app-user-card *ngFor="let user of pagedUsers" [user]="user" (click)="openPopupWithRepos(user.login)"></app-user-card>
+    </ul>
+  
+    <div class="pagination-controls" *ngIf="totalPages > 1">
+      <button (click)="prevPage()" [disabled]="currentPage === 1">Anterior</button>
+      <span>Página {{ currentPage }} de {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">Siguiente</button>
+    </div>
+  </div>
+<!-- Popup -->
+<app-popup [visible]="isPopupVisible" (close)="closePopup()">
+  <h2>Repositorios de {{ selectedUserName }}</h2>
+
+  <app-loading-no-results 
+    [loading]="loadingRepos" 
+    [noResults]="!loadingRepos && selectedUserRepos.length === 0">
+  </app-loading-no-results>
+
+  <ul *ngIf="!loadingRepos && selectedUserRepos.length > 0">
+    <li *ngFor="let repo of selectedUserRepos">
+      <strong>{{ repo.name }}</strong>
+      <p>{{ repo.description || 'Sin descripción' }}</p>
+      <a [href]="repo.html_url" target="_blank">Ver repositorio en GitHub</a>
+    </li>
+  </ul>
+</app-popup>
